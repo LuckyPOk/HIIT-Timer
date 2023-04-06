@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="icons/favicon.ico">
+
+    <title>HIIT Timer</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>HIIT Timer</h1>
+    
+    <div id="setup">
+      <h3>Sets</h3>
+      <label for="sets">Number of sets:</label><br>
+      <input type="text" id="sets">
+
+      <h3>Warmup Interval</h3>
+      <label for="warmup">Duration(Seconds):</label><br>
+      <input type="text" id="warmup">
+
+      <h3>High Intensity Intervals</h3>
+      <label for="highInt">Duration(Seconds):</label><br>
+      <input type="text" id="highInt">
+
+      <h3>Low Intensity Intervals</h3>
+      <label for="lowInt">Duration(Seconds):</label><br>
+      <input type="text" id="lowInt">
+
+      <h3>Cooldown Interval</h3>
+      <label for="cooldown">Duration(Seconds):</label><br>
+      <input type="text" id="cooldown"><br><br>
+
+      <input type="submit" onclick="setTimer()" value="Set Timer">
+    </div>
+
+    <div id="timerDisplay">
+      <h3 id="setTrack"></h3>
+      <h2 id="timer">0:00</h2><br>
+
+      <button id="stop" onclick="stopTimer()">Stop</button>
+      <button id="start" onclick="timerStart()">Start</button>
+      <button id="next" onclick="nextSet()">Next Set</button>
+      <button id="reset" onclick="resetSet()">Reset Set</button>
+    </div>
+    
+  </body>
+</html>
